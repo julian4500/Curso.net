@@ -1,0 +1,28 @@
+// clase 5 ejercicio  
+
+Console.Clear();
+
+Console.WriteLine("Ingrese su nombre: ");
+string persona1 = Console.ReadLine();
+Console.WriteLine($"¡Hola, {persona1}!");
+Console.WriteLine("Quiere continuar? responda con s o con n");
+string respuesta = Console.ReadLine();
+
+while (respuesta == "s")
+{
+    Console.WriteLine("Ingrese su nombre: ");
+    persona1 = Console.ReadLine();
+    Console.WriteLine($"¡Hola, {persona1}!");
+    Console.WriteLine("Quiere continuar? responda con s o con n");
+    respuesta = Console.ReadLine();
+}
+
+if (respuesta == "n")
+{
+    Console.WriteLine("programa finalizado correctamente");
+}
+else
+{
+    Console.WriteLine("opcion no valida");
+}
+
