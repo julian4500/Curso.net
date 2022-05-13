@@ -1,0 +1,29 @@
+Console.Clear();
+
+// Genera un numero entero aleatorio de 1 a 20
+int NumeroSecreto = new
+Random(DateTime.Now.Millisecond).Next(1, 21);
+int contador = 1;
+Console.WriteLine($"Numero elegido por el soft {NumeroSecreto}");
+Console.WriteLine("Que numero eligio el programa?");
+int NumUsuario = int.Parse(Console.ReadLine());
+
+while (NumUsuario != NumeroSecreto)
+{
+    if (NumUsuario > NumeroSecreto)
+    {
+        Console.WriteLine("El numero eligido es mayor que el elegido por el  programa!");
+        Console.WriteLine("Vuelva a intentarlo:");
+        NumUsuario = int.Parse(Console.ReadLine());
+        contador++;
+    }
+    if (NumUsuario < NumeroSecreto)
+    {
+        Console.WriteLine("El numero eligido es menor que el elegido por el  programa!");
+        Console.WriteLine("Vuelva a intentarlo:");
+        NumUsuario = int.Parse(Console.ReadLine());
+        contador++;
+    }
+ }
+    Console.WriteLine($"Felicitaciones, has adivinado el número secreto que es: {NumeroSecreto}");
+    Console.WriteLine($"Lo has logrado en {contador} cantidad de intentos");
